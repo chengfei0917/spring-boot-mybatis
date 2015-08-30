@@ -10,8 +10,6 @@
 
 .idea/
 
-bin/
-
 target/
 
 .settings/

@@ -9,7 +9,7 @@
     </parent>
 	<artifactId>spring-boot-mybatis</artifactId>
 	<packaging>jar</packaging>
-	<!--<version>1.0.0</version>-->
+	<version>1.0.0</version>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -47,6 +47,9 @@
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
 			</resource>
 		</resources>
 		<plugins>
