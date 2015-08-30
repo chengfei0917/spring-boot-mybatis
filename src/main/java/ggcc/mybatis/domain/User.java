@@ -1,5 +1,8 @@
 package ggcc.mybatis.domain;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("user")
 public class User {
 
 	private int id;

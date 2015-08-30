@@ -19,12 +19,12 @@ public class ApplicationMain implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-        System.out.println("Adding User");
-		User newUser = new User("ggcc@qq.com", "mybatis test");
-        userService.addUser(newUser);
-        System.out.println("Getting User:"+newUser.getId());
-        User user = userService.getUser(newUser.getId());
-        System.out.println("Got User: " + user.getUserName());
+//        System.out.println("Adding User");
+//		User newUser = new User("ggcc@qq.com", "mybatis test");
+//        userService.addUser(newUser);
+//        System.out.println("Getting User:"+newUser.getId());
+        User user = userService.getUser(1);
+        System.out.println(user.getUserName());
 	}
 
 }
