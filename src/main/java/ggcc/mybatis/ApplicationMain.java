@@ -2,6 +2,7 @@ package ggcc.mybatis;
 
 import ggcc.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,9 @@ public class ApplicationMain implements CommandLineRunner {
     @Autowired
     private UserService userService;
 
+	@Value("${config.env}")
+	private String env;
+
 	@Override
 	public void run(String... args) {
 //        System.out.println("Adding User");
@@ -25,6 +29,8 @@ public class ApplicationMain implements CommandLineRunner {
 //        System.out.println("Getting User:"+newUser.getId());
         User user = userService.getUser(1);
         System.out.println(user.getUserName());
+        System.out.println(env);
+
 	}
 
 }
