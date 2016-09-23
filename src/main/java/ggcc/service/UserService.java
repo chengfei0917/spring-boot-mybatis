@@ -1,9 +1,9 @@
-package ggcc.mybatis.service;
+package ggcc.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ggcc.mybatis.domain.User;
-import ggcc.mybatis.persistence.UserMapper;
+import ggcc.domain.User;
+import ggcc.repository.persistence.UserMapper;
 
 @Service
 public class UserService {

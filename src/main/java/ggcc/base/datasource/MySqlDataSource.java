@@ -1,4 +1,4 @@
-package ggcc.mybatis.datasource;
+package ggcc.base.datasource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "ggcc.mybatis.persistence")
+@MapperScan(basePackages = "ggcc.repository.persistence")
 public class MySqlDataSource {
 
     @Autowired
@@ -28,7 +28,7 @@ public class MySqlDataSource {
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-        sessionFactory.setTypeAliasesPackage("ggcc.mybatis.domain");
+        sessionFactory.setTypeAliasesPackage("ggcc.domain");
         sessionFactory.setDataSource(dataSource);
         return sessionFactory.getObject();
     }

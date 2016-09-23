@@ -1,8 +1,7 @@
-package ggcc.mybatis.persistence;
+package ggcc.repository.persistence;
 
 import org.apache.ibatis.annotations.Param;
-
-import ggcc.mybatis.domain.User;
+import ggcc.domain.User;
 
 public interface UserMapper {
 

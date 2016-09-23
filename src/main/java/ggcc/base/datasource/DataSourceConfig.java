@@ -1,4 +1,4 @@
-package ggcc.mybatis.datasource;
+package ggcc.base.datasource;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
